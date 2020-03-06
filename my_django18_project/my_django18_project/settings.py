@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'my_django18_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'test?retryWrites=true&w=majority',
+        'HOST': 'mongodb+srv://sprekk:password1@sprekk-4kc7p.gcp.mongodb.net/test?retryWrites=true&w=majority' ,
+        'USER': 'sprekk'
+        'PASSWORD': 'Nate1234',
     }
 }
 
