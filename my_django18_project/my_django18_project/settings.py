@@ -78,8 +78,8 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'test?retryWrites=true&w=majority',
         'HOST': 'mongodb+srv://sprekk:password1@sprekk-4kc7p.gcp.mongodb.net/test?retryWrites=true&w=majority' ,
-        'USER': 'sprekk'
-        'PASSWORD': 'Nate1234',
+        'USER': 'sprekk',
+        'PASSWORD': 'Nate1234'
     }
 }
 
