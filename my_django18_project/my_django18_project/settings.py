@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+# import mongoengine
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -75,14 +75,27 @@ WSGI_APPLICATION = 'my_django18_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'test?retryWrites=true&w=majority',
-        'HOST': 'mongodb+srv://sprekk:password1@sprekk-4kc7p.gcp.mongodb.net/test?retryWrites=true&w=majority' ,
-        'USER': 'sprekk',
-        'PASSWORD': 'Nate1234'
+        'ENGINE': 'django_mongodb_engine',
+        'NAME': 'testdb'
+        # 'HOST': 'mongodb+srv://sprekk:password1@sprekk-4kc7p.gcp.mongodb.net/testdb' ,
+        # 'USER': 'sprekk',
+        # 'PASSWORD': 'Nate1234'
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         _MONGODB_USER = 'mongouser'
+#         _MONGODB_PASSWD = 'password'
+#         _MONGODB_HOST = 'thehost'
+#         _MONGODB_NAME = 'thedb'
+#         _MONGODB_DATABASE_HOST = \
+#             'mongodb://%s:%s@%s/%s' \
+#             % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
+
+# mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
+
+# SESSION_ENGINE = 'mongoengine.django.sessions'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
