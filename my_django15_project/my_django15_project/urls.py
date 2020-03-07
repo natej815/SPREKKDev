@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns ('my_django15_project.views.home',
     # Examples:
     # url(r'^$', 'my_django15_project.views.home', name='home'),
     # url(r'^my_django15_project/', include('my_django15_project.foo.urls')),
